@@ -19,3 +19,81 @@
 1. ...
 2. ...
 3. ...
+
+В данном HTML-коде обнаружены следующие ошибки:
+
+Орфографические ошибки в тексте:
+“Основныые Инструменты” - правильно: “Основные Инструменты”
+“Тетирование” - правильно: “Тестирование”
+“Windos” - правильно: “Windows”
+Синтаксические ошибки:
+Лишний закрывающий тег </p> после строки <p class="subtitle">Тестирование WEB-приложений</p>
+Стилистические ошибки:
+Использование тега <center> считается устаревшим, лучше использовать CSS для выравнивания
+Атрибут align="center" также устарел, рекомендуется использовать CSS
+Ошибки форматирования:
+В дате в футере лишний пробел: &copy; 202 4 - должно быть &copy; 2024
+Оптимизация кода:
+В тегах <link rel="stylesheet"> атрибут type="text/css" можно опустить, так как он подразумевается по умолчанию
+Рекомендуется упорядочить мета-теги: сначала кодировка, затем viewport, потом остальные теги
+Исправленный вариант кода:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal for QA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="shortcut icon" href="img/fav.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+</head>
+<body>
+    <!--Card-->
+    <div class="card animated fadeIn">
+        <div class="center">
+            <img class="center animated rollIn" src="img/ava.png" alt="avatar">
+        </div>
+        <hr>
+        <div class="name">
+            Основные Инструменты
+        </div>
+        <p class="subtitle">Тестирование WEB-приложений</p>
+        <p class="location">
+            <a href="html/cmd.html">Командная строка Windows</a>
+        </p>
+        <p class="location">
+            <a href="html/mac.html">Терминал MacOS</a>
+        </p>
+        <p class="location">
+            <a href="html/git.html">Git</a>
+        </p>
+        <p><br></p>
+    </div>
+    <!--footer-->
+    <footer class="animated fadeIn">
+        &copy; 2024. SkyPro
+    </footer>
+</body>
+</html>
+
+Рекомендации по CSS:
+.center {
+    text-align: center;
+}
+
+.avatar {
+    display: block;
+    margin: 0 auto;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    margin: 10px 0;
+}
+Теперь код соответствует современным стандартам HTML и CSS, более структурирован и легче читается.
